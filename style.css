@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Roboto:ital,wght@1,300&family=Sansita+Swashed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Roboto:ital,wght@1,300&family=Sansita+Swashed:wght@300;400&family=Sarala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&family=Roboto:ital,wght@1,300&family=Sansita+Swashed:wght@300;400&family=Sarala:wght@400;700&display=swap');
+
+
+/* este é o reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+/** é no cabeçalho q colocaremos a divisão da img para esquerda e os links para direita
+usando o FLEXBOX, temos que observar q temos as propriedade para PAI e para o FILHO
+maiores informações:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+.cabecalho {
+    display: flex;
+    /**Vai mudar de linha vertical para horizontal*/
+    flex-direction: row;
+    /*Vai centralizar a image e os link*/
+    align-items: center;
+    /**Vai por a Image para Esc e os Links para direita, com margens left e right*/
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.cabecalho-img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.cabecalho-menu {
+    /** DISPLAY FLEX vai por  FLEX na NAV que é  PAI das tags Ancoras, podemo tb por um DISPLAY FLEX */
+    display: flex;
+    /**GAP Vai por uma distancia dentro do elemento PAI entre os FILHO q neste caso é Cabeçalho-Menu*/
+    gap: 32px;
+}
+
+.cabecalho-menu-item {
+
+    font-family: 'Sarala';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #FFF2E7;
+
+}
+
+/**Passaremos para BODY e suas SECTIONS*/
+
+.conteudo {
+    border-top: 0.4px solid #FFF2E7;
+    margin-bottom: 3rem;
+}
+
+.conteudo-principal {
+    display: flex;
+    /**Vai mudar de linha vertical para horizontal*/
+    flex-direction: row;
+    /*Vai centralizar a image e os link*/
+    align-items: center;
+    /**Vai por a Image para Esc e os Links para direita, com margens left e right*/
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 79px;
+    color: #FFF2E7;
+}
+
+.conteudo-principal-escrito-titulo-subtitulo {
+    font-family: 'Sarala';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    color: #ECD6C4;
+
+}
+
+.conteudo-principal-escrito-button {
+    background: #ECD6C4;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    width: 11rem;
+    height: 4rem;
+    border-radius: 20px;
+    font-family: 'Sarala';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    text-align: center;
+    color: #2F2325;
+}
+
+.conteudo-principal-escrito-button:hover {
+    background-color: rgba(236, 214, 190, 0.53);
+}
+
+.conteudo-principal-escrito-img {
+    height: 26rem;
+    margin-top: 1%;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+
+}
+
+.conteudo-secundario-titulo {
+    width: 100%;
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFF2E7;
+}
+
+.conteudo-secundario-paragrafo {
+    font-family: 'Sarala';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #ECD6C4;
+}
+
+.rodape {
+    display: flex;
+    width: 100%;
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 3rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Sarala';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #ECD6C4;
+}
+
+.rodape-img {
+    height: 8rem;
+}
